@@ -37,9 +37,8 @@ This project uses **DistilGPT-2**, a smaller pretrained causal transformer, and 
 **Baseline input**
 ```text
 i still hear your voice at night...
-
-****
-Controlled input
+``` 
+## Controlled input
 
 <MOOD=sad> <DECADE=1990s>
 i still hear your voice at night...
