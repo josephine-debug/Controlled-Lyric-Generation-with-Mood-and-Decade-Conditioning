@@ -23,7 +23,7 @@ The dataset was built from a cleaned subset of Billboard song lyrics. Lyrics wer
 - labeled with **mood** and **decade**
 - split by **song** into train, validation, and test sets to avoid leakage
 
-Final split:
+## Final split:
 - **Train:** 167 examples
 - **Validation:** 36 examples
 - **Test:** 36 examples :contentReference[oaicite:3]{index=3}
@@ -42,12 +42,12 @@ i still hear your voice at night...
 
 <MOOD=sad> <DECADE=1990s>
 i still hear your voice at night...
-Training setup
-Tokenization with Hugging Face Transformers
-Text grouped into fixed blocks of 128 tokens
-Fine-tuning with causal language modeling
-Generation using temperature, top-k, top-p, repetition penalty, and no-repeat n-gram constraints
-Results
+## Training setup
+- Tokenization with Hugging Face Transformers
+- Text grouped into fixed blocks of 128 tokens
+- Fine-tuning with causal language modeling
+- Generation using temperature, top-k, top-p, repetition penalty, and no-repeat n-gram constraints
+## Results
 
 In the final evaluation:
 
@@ -56,7 +56,7 @@ Controlled: eval loss = 3.7863, perplexity = 44.09
 
 The controlled model slightly outperformed the baseline on standard evaluation metrics, but the margin was small. Qualitatively, both models generated lyric-like text, though both still struggled with coherence and strong stylistic consistency.
 
-Key Takeaways
+## Key Takeaways
 Prompt-based control with mood and decade tokens is feasible
 The controlled model showed a small improvement over the baseline
 Performance was still limited by:
@@ -65,20 +65,7 @@ repetitive lyric structure
 relatively simple conditioning labels
 Repository Contents
 
-Suggested important files in this repo:
 
-train.csv – training split
-val.csv – validation split
-test.csv – test split
-lyrics_final.csv – final cleaned/labeled lyric dataset
-lyrics_model_ready.csv – model-ready dataset
-baseline_generations.csv – baseline model outputs
-controlled_generations.csv – controlled model outputs
-comparison_outputs.csv – side-by-side baseline vs. controlled outputs
-model_metrics.csv – final eval loss and perplexity results
-DATA446FINAL.ipynb – main notebook for cleaning, training, evaluation, and generation
-Example Controlled Prompt
-<MOOD=happy> <DECADE=1980s>
 
 Example goal: generate a short lyric continuation that reflects the requested tone and era.
 
@@ -90,12 +77,12 @@ DistilGPT-2
 Google Colab
 Future Work
 
-Possible extensions to this project include:
+## Possible extensions to this project include:
 
-using a larger lyric dataset
-adding richer conditioning variables such as theme or song section
-improving human evaluation of lyrical creativity and stylistic alignment
-experimenting with larger or more specialized transformer models
-References
+- using a larger lyric dataset
+- adding richer conditioning variables such as theme or song section
+- improving human evaluation of lyrical creativity and stylistic alignment
+- experimenting with larger or more specialized transformer models
+## References
 Dhandapani, A., Ilakiyaselvan, N., Mandal, S., Bhadra, S., & Viswanathan, V. (2023). Lyrics Generation Using LSTM and RNN. In Big Data and Cloud Computing. Springer.
 Monteith, K., Martinez, T., & Ventura, D. (2012). Automatic Generation of Melodic Accompaniments for Lyrics. In Proceedings of the International Conference on Computational Creativity.
