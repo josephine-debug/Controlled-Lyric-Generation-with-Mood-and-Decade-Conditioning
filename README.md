@@ -4,8 +4,7 @@ This project explores **controlled lyric generation** using a pretrained causal 
 
 ## Overview
 
-Song lyrics are a form of creative text that depend heavily on tone, style, and repetition. This project investigates whether adding simple control tokens such as `<MOOD=sad>` and `<DECADE=1990s>` can guide a language model to generate more stylistically consistent lyrics than a baseline model without explicit controls. :contentReference[oaicite:1]{index=1}
-
+Song lyrics are a form of creative text that depend heavily on tone, style, and repetition. This project investigates whether adding simple control tokens such as `<MOOD=sad>` and `<DECADE=1990s>` can guide a language model to generate more stylistically consistent lyrics than a baseline model without explicit controls. 
 Two models were compared:
 
 - **Baseline model**: trained on lyric text only
@@ -13,7 +12,7 @@ Two models were compared:
 
 ## Motivation
 
-Traditional lyric generation models often produce text that is generic, repetitive, or weakly aligned with the style a user wants. This project studies whether lightweight prompt conditioning can make generated lyrics more useful for creative assistance, especially for songwriting ideation. :contentReference[oaicite:2]{index=2}
+Traditional lyric generation models often produce text that is generic, repetitive, or weakly aligned with the style a user wants. This project studies whether lightweight prompt conditioning can make generated lyrics more useful for creative assistance, especially for songwriting ideation. 
 
 ## Dataset
 
@@ -26,12 +25,11 @@ The dataset was built from a cleaned subset of Billboard song lyrics. Lyrics wer
 ## Final split:
 - **Train:** 167 examples
 - **Validation:** 36 examples
-- **Test:** 36 examples :contentReference[oaicite:3]{index=3}
+- **Test:** 36 examples 
 
 ## Methodology
 
-This project uses **DistilGPT-2**, a smaller pretrained causal transformer, and fine-tunes it for lyric generation. The task is framed as **causal language modeling**, where the model predicts the next token in a sequence. :contentReference[oaicite:4]{index=4}
-
+This project uses **DistilGPT-2**, a smaller pretrained causal transformer, and fine-tunes it for lyric generation. The task is framed as **causal language modeling**, where the model predicts the next token in a sequence. 
 ### Input formatting
 
 **Baseline input**
